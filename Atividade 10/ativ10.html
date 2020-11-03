@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade 10</title>
+</head>
+<body>
+    
+    <div style="width: 600px; height: 600px; background-color: gray;">
+      
+        <h1 style="text-align: center;">Formulário Principal</h1>
+       
+       <form name="myForm" action="https://www.youtube.com/watch?v=dQw4w9WgXcQ" onsubmit="return validateForm()" method="post" style="margin-left: 40px; text-align: center;">
+                
+                    <label for="name">Nome:</label><br>
+                    <input type="text" id="name" name="name" value=""><br>                 
+               
+                    <label for="email">Email:</label><br>
+                    <input type="text" id="email" name="email" value=""><br>
+                    
+                    <div>
+                        <label for="comentario">Comentario:</label>
+                    </div>
+                    <textarea name="" id="" cols="30" rows="10"></textarea>
+                
+                    <h3>Pesquisa</h3>
+                   
+                    <div>
+                        <label for="">Primeira vez na pagina?</label>
+                    </div>
+                    
+                    <input type="radio" id="q" value="sim"> Sim<br>
+                    <input type="radio" id="q" value="nao"> Não<br>
+                
+                    <input type="submit" value="Enviar" style="margin-top: 20px;">
+                    <input type="submit" value="Limpar">
+                
+            </div>
+        </form>
+
+        <script>
+            function validateForm() {
+                var x = document.forms["myForm"]["name"].value;
+                var y = document.forms["myForm"]["email"].value;
+                var z = document.forms["myForm"]["q"].value;
+                
+                 if (x == "" || y == "") {
+                alert("Informe o nome e o email!");
+                 return false;
+                }
+
+                if(z == "sim"){
+                    alert("Que bom que você voltou a visitar esta pagina!");
+                }else{
+                    alert("Volte sempre a esta pagina!");
+                }
+            }
+        </script>
+</body>
+</html>
